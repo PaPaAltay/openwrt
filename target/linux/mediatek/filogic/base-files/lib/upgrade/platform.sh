@@ -249,6 +249,10 @@ platform_pre_upgrade() {
 	asus,tuf-ax6000)
 		asus_initial_setup
 		;;
+        cudy,wr3000h-v1)
+		CI_UBIPART="ubi"
+		nand_do_upgrade "$1"
+  		;;
 	xiaomi,mi-router-ax3000t|\
 	xiaomi,mi-router-wr30u-stock|\
 	xiaomi,redmi-router-ax6000-stock)
